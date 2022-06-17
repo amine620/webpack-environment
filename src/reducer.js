@@ -1,4 +1,4 @@
-export  const reducer = (state = [], action) => {
+export  const reducer = (state = [0], action) => {
     switch (action.type) {
        case 'ITEMS_REQUEST':
               alert('hi')
