@@ -11,8 +11,6 @@ export function reducer(state=[],action){
                     resolved:false
                 }
             ]
-            
-            break;
         default:state
             break;
     }

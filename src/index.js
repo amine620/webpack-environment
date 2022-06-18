@@ -1,3 +1,12 @@
 import { store } from "./store";
 
-console.log(store);
+
+
+
+store.dispatch({
+    type:"bugAdded",
+    payload:{
+        description:'added'
+    }
+})
+console.log(store.getState());
