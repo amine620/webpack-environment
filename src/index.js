@@ -1,14 +1,10 @@
+import { bugadded } from "./actionsCreator";
 import { store } from "./store";
 
 
 document.getElementById('btn').addEventListener('click',function(){
 
-    store.dispatch({
-        type:"bugAdded",
-        payload:{
-            description:'added'
-        }
-    })
+    store.dispatch(bugadded("added"))
 })
 
 // console.log(store.getState());
@@ -20,4 +16,4 @@ let unsubscribe=store.subscribe(()=>{
     console.log("state change");
 }
 )
-unsubscribe()
+// unsubscribe()
