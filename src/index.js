@@ -1,19 +1,8 @@
-const person = { 
-name: "amine" ,
-address:{
-    country:"maroc",
-    city:"casa"
-}
-}
-let updated = {
-    ...person,
-    name: 'said',
-    address:{
-        ...person.address,
-    },
-}
+const numbers=[1,2,3];
 
-updated.address.city="rabat"
+// adding
 
-console.log(person);
-console.log(updated);
+const index=numbers.indexOf(2)
+const added=[...numbers.slice(0,index),4,...numbers.slice(index)]
+
+console.log(added);
