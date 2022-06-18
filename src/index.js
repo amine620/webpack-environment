@@ -1,23 +1,21 @@
 import { bugadded, bugresolved, resolved } from "./actionsCreator";
-import { store } from "./store";
+// import { store } from "./store";
 
+import store from "./customStore";
 
 document.getElementById('btn1').addEventListener('click',function(){
 
     store.dispatch(bugadded("added"))
-})
-document.getElementById('btn2').addEventListener('click',function(){
+console.log(store.getState());
 
-    store.dispatch(bugresolved(1))
 })
+// document.getElementById('btn2').addEventListener('click',function(){
 
-// console.log(store.getState());
+//     store.dispatch(bugresolved(1))
+// })
 let unsubscribe=store.subscribe(()=>{
-    let data=store.getState()
-//    data.forEach(el=>{
-//         document.querySelector('div').innerHTML+=el.id
-//     })
-    console.log(data);
+   
+
+    console.log("state change");
 }
 )
-// unsubscribe()
