@@ -9,3 +9,10 @@ export const  bugadded=(description)=>({
         }
     
 })
+
+export const  bugresolved=(id)=>({
+   
+    type:actions.BUG_RESOLVED,
+    payload:id 
+
+})

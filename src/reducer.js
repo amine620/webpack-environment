@@ -12,6 +12,10 @@ export function reducer(state=[],action){
                     resolved:false
                 }
             ]
+            case actions.BUG_RESOLVED:
+                return[
+                    ...state.map(bug=>bug.id==action.payload?{...bug,resolved:true}:bug), 
+                ]
         default:state
             break;
     }
