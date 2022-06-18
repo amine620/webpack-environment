@@ -4,9 +4,9 @@ import {compose,pipe} from "lodash/fp"
 let input ="javascript"
 
 const trim=str=>str.trim()
-const wrapInDiv=str=>`<div>${str}</div>`
-const toLowerCase=str=>str.toLowerCase()
+const toLower=str=>str.toLowerCase()
+const wrapInElement=element=>str=>`<${element}>${str}</${element}>`
 
-const transform=compose(toLowerCase,wrapInDiv,trim)
-transform(input)
+const transform=pipe(trim,toLower,wrapInElement('div'))
+console.log(transform(input));
 // const result=toLowerCase(wrapInDiv(trim(input)))
