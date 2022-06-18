@@ -1,21 +1,15 @@
-import { bugadded, bugresolved, resolved } from "./actionsCreator";
+import { bugadded, bugresolved} from "./store/bugs";
+import { configureStore } from "./store/configureStore";
 // import { store } from "./store";
 
-import store from "./customStore";
 
-document.getElementById('btn1').addEventListener('click',function(){
-
-    store.dispatch(bugadded("added"))
-console.log(store.getState());
-
-})
 // document.getElementById('btn2').addEventListener('click',function(){
 
 //     store.dispatch(bugresolved(1))
 // })
-let unsubscribe=store.subscribe(()=>{
-   
+const store=configureStore()
 
-    console.log("state change");
-}
-)
+store.dispatch(bugadded("bug 1"))
+store.dispatch(bugadded("bug 2"))
+store.dispatch(bugadded("bug 3"))
+
