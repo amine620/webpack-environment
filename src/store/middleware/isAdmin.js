@@ -1,7 +1,7 @@
 
 const currentUser={
     name:'amine',
-    isAdmin:false
+    isAdmin:true
 }
 
 
