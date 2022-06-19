@@ -1,9 +1,9 @@
 import {combineReducers} from "redux"
-import { bugsReducer  } from "./bugs";
-import { projecstReducer } from "./projects";
+import bugsReducer   from "./bugs";
+import projectsReducer  from "./projects";
 
 
 export default combineReducers({
     bugs:bugsReducer,
-    projects:projecstReducer
+    projects:projectsReducer
 })
